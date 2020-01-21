@@ -1,3 +1,4 @@
+<
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -22,7 +23,8 @@
 <title>Online Shopping - ${title}</title>
 
 <script>
-	window.menu = '${title}'
+	window.menu = '${title}';
+	window.contextRoot = '${contextRoot}'
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -30,6 +32,9 @@
 
 <!--  Bootstrap Readable Theme -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
+<!--  Bootstrap DataTables -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 
 
 <!-- Add custom CSS here -->
@@ -67,14 +72,28 @@
 			</c:if>
 			
 			
+			<!--  Load only  when user clicks show product -->
+			<c:if test="${userClickShowProduct == true}">
+			   <%@include file="singleProduct.jsp"%>
+			</c:if>
+			
+			
 		</div>
 
 		<!-- Footer comes here -->
 		<%@include file="./shared/footer.jsp"%>
 
-		<!-- JavaScript -->
+		<!-- JQuery -->
 		<script src="${js}/jquery.js"></script>
-		<script src="${js}/bootstrap.js"></script>
+		
+		<!-- Bootstrap core javascript -->
+		<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- DataTables plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- DataTables Bootstrap Script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
 
 		<!--  Self coded javascript -->
 		<script src="${js}/myapp.js"></script>
