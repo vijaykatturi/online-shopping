@@ -23,6 +23,10 @@
                      <a href="${contextRoot}/show/all/products">View Products</a>
                     </li>
                     
+                    <li id="manageProducts">
+                       <a href="${contextRoot}/manage/products">ManageProducts</a>
+                    </li>
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

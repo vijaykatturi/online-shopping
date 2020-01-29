@@ -1,4 +1,4 @@
-<
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -78,6 +78,11 @@
 			</c:if>
 			
 			
+			<!--  Load only  when user clicks manage products -->
+			<c:if test="${userClickManageProducts == true}">
+			   <%@include file="manageProducts.jsp"%>
+			</c:if>			
+			
 		</div>
 
 		<!-- Footer comes here -->
@@ -85,6 +90,9 @@
 
 		<!-- JQuery -->
 		<script src="${js}/jquery.js"></script>
+		
+			<!-- JQuery Validator-->
+		<script src="${js}/jquery.validate.js"></script>
 		
 		<!-- Bootstrap core javascript -->
 		<script src="${js}/bootstrap.min.js"></script>
@@ -94,6 +102,9 @@
 		
 		<!-- DataTables Bootstrap Script -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		<!-- Bootbox -->
+		<script src="${js}/bootbox.min.js"></script>
 
 		<!--  Self coded javascript -->
 		<script src="${js}/myapp.js"></script>

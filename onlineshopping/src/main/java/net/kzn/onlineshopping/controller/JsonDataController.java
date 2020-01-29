@@ -19,9 +19,15 @@ public class JsonDataController {
 	private ProductDAO productDAO;
 	
 	@RequestMapping("/all/products")
-	@ResponseBody  // it converts the list of products in the form of json
+	@ResponseBody  // it converts the list of products into the form of json
 	public List<Product> getAllProducts(){
 		return productDAO.listActiveProducts();
+	}
+	
+	@RequestMapping("/admin/all/products")
+	@ResponseBody  // it converts the list of products into the form of json
+	public List<Product> getAllProductsForAdmin(){
+		return productDAO.list();
 	}
 	
 	@RequestMapping("/category/{id}/products")
