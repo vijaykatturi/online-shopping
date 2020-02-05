@@ -22,7 +22,7 @@ public class Cart implements Serializable {
 	@Column(name="grand_total")
 	private double grandTotal;
 	@Column(name="cart_lines")
-	private int cartLInes;
+	private int cartLines;
 	/*****************/
 	@OneToOne
 	private User user;
@@ -50,15 +50,15 @@ public class Cart implements Serializable {
 	public void setGrandTotal(double grandTotal) {
 		this.grandTotal = grandTotal;
 	}
-	public int getCartLInes() {
-		return cartLInes;
+	public int getCartLines() {
+		return cartLines;
 	}
-	public void setCartLInes(int cartLInes) {
-		this.cartLInes = cartLInes;
+	public void setCartLines(int cartLines) {
+		this.cartLines = cartLines;
 	}
 	@Override
 	public String toString() {
-		return "Cart [id=" + id + ", grandTotal=" + grandTotal + ", cartLInes=" + cartLInes + ", user=" + user + "]";
+		return "Cart [id=" + id + ", grandTotal=" + grandTotal + ", cartLInes=" + cartLines + ", user=" + user + "]";
 	}
 	
 	

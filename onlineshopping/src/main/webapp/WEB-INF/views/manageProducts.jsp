@@ -126,8 +126,9 @@
 			<hr />
 		</div>
 		<div class="col-xs-12">
-			<div style="overflow: auto">
-				<!-- Products table for Admin -->
+		   <div class="container-fluid">
+		     <div class="table-responsive">
+		         	<!-- Products table for Admin -->
 				<table id="adminProductsTable"
 					class="table table-striped table-bordered">
 					<thead>
@@ -156,7 +157,9 @@
 						</tr>
 					</tfoot>
 				</table>
-			</div>
+		     </div>  		     		   
+		   </div>
+			
 		</div>
 	</div>
 
