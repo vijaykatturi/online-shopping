@@ -59,12 +59,24 @@ public class CartLineDAOImpl implements CartLineDAO {
 	public CartLine get(int id) {		
 		return sessionFactory.getCurrentSession().get(CartLine.class, Integer.valueOf(id));
 	}
+	
+	
+	@Override
+	public boolean delete(CartLine cartLine) {	
+		try {			
+			sessionFactory.getCurrentSession().delete(cartLine);
+			return true;
+		}catch(Exception ex) {
+			return false;
+		}		
+	}
+
 
 	
 	
 	@Override
 	public CartLine getByCartAndProduct(int cartId, int productId) {
-		String query = "FROM CartLine WHERE cartId = :cartId AND available product.id = :productId";
+		String query = "FROM CartLine WHERE cartId = :cartId AND product.id = :productId";
 		try {
 			return sessionFactory.getCurrentSession()
 					.createQuery(query, CartLine.class)

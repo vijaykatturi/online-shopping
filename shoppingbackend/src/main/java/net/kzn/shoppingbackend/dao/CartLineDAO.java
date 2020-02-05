@@ -11,6 +11,8 @@ public interface CartLineDAO {
 	public boolean add(CartLine cartLine);
 	public boolean update(CartLine cartLine);
 	public List<CartLine> list(int cartId);
+	public boolean delete(CartLine cartLine);
+
 	
 	//other business methods related to the cart lines
 	public List<CartLine> listAvailable(int cartId);
