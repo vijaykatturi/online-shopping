@@ -11,7 +11,7 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<javaee.version>7.0</javaee.version>
-		<springwebmvc.version>5.2.0.RELEASE</springwebmvc.version>
+		<springwebmvc.version>5.3.19</springwebmvc.version>
 		<spring.security.version>4.2.2.RELEASE</spring.security.version>
 	</properties>
 	<dependencies>
